@@ -13,7 +13,7 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 
 
 router.get('/', userController.home);
-router.get('/admin', adminMiddleware, userController.admin);
+router.get('/admin', adminMiddleware.ckeckAdmin, userController.admin);
 router.get('/services', userController.services);
 router.get('/services/design', userController.design);
 
