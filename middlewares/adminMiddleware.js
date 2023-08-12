@@ -7,6 +7,7 @@ function userAdmin(req, res, next) {
         next(); // Usuario autorizado, pasa al siguiente middleware
     } else {
         res.send('No tienes los privilegios para ingresar');
+        // res.redirect('/'); // O se puede redireccionar al home u otra ruta
     }
 };
 
